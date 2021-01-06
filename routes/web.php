@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\userController;
+use App\Http\Controllers\GroupController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,6 +42,21 @@ Route::group(['middleware' => ['auth','isAdmin']], function () {
     Route::get('roll-delete/{id}',[AdminController::class,'delete']);
 
     Route::post('roll-update/{id}',[AdminController::class,'update']);
+
+    Route::get('group',[GroupController::class,'group']);
+    Route::get('add-group',[GroupController::class,'add_group']);
+    Route::post('adding_group',[GroupController::class,'adding_group']);
+    Route::get('edit_group/{id}',[GroupController::class,'edit_group']);
+    Route::post('update_group/{id}',[GroupController::class,'update_group']);
+    Route::get('delete_group/{id}',[GroupController::class,'delete_group']);
+
+    Route::get('category',[GroupController::class,'category']);
+    Route::get('add-category',[GroupController::class,'add_category']);
+    Route::post('adding_category',[GroupController::class,'adding_category']);
+    Route::get('edit_category/{id}',[GroupController::class,'edit_category']);
+    Route::post('update_category/{id}',[GroupController::class,'update_category']);
+    Route::get('delete_category/{id}',[GroupController::class,'delete_category']);
+
 
 });
 

@@ -45,7 +45,7 @@
   </style>
 
   <style>
-      body{
+      .pro_body{
     background: -webkit-linear-gradient(left, #3931af, #00c6ff);
 }
 .emp-profile{

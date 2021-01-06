@@ -2,7 +2,7 @@
 
 @section('content')
 
-
+<div class="ipro_body" style="height: 100vh">
 <div class="container emp-profile" >
             <form method="post">
                 <div class="row">
@@ -19,12 +19,12 @@
                                         {{ Auth::user()->roll_as }}
                                     </h6>
                             </div>
-                            
+
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="profile-head">
-                                    
+
 
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
@@ -132,8 +132,10 @@
                         <a href="update-user-profile" type="button" class="btn btn-primary">Update Profile</a>
                     </div>
                 </div>
-                
+
             </form>
         </div>
+
+    </div>
 
 @endsection

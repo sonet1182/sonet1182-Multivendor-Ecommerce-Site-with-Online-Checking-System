@@ -47,6 +47,6 @@ class UserController extends Controller
 
         $user->update();
         return redirect()->back()->with('status','Your Profile has Updated!');
-        
+
     }
 }
