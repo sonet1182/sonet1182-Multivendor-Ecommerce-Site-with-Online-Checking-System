@@ -12,7 +12,7 @@
         <!--Grid column-->
         <div class="col-md-6 mb-4">
 
-          <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/14.jpg" class="img-fluid" alt="">
+          <img src="{{ asset('uploads/item/'.$data->photo) }}" class="img-fluid" alt="">
 
         </div>
         <!--Grid column-->
@@ -25,7 +25,7 @@
 
             <div class="mb-3">
               <a href="">
-                <span class="badge purple mr-1">Category 2</span>
+                <span class="badge purple mr-1">{{ $data->sub_category->name }}</span>
               </a>
               <a href="">
                 <span class="badge blue mr-1">New</span>
@@ -37,10 +37,14 @@
 
             <p class="lead">
               <span class="mr-1">
-                <del>$200</del>
+                <del>{{ $data->offer_price }}/=</del>
               </span>
-              <span>$100</span>
+              <span>{{ $data->price }}/=</span>
             </p>
+
+            <h4 class="font-weight-bold blue-text">
+                <strong>{{ $data->name }}</strong>
+            </h4>
 
             <p class="lead font-weight-bold">Description</p>
 

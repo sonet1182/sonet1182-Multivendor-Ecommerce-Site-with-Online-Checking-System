@@ -209,11 +209,8 @@
         <!--Grid row-->
         <div class="row wow fadeIn">
 
-            @php
-                $item = App\Models\item::all();
-            @endphp
 
-            @foreach($item as $data)
+            @foreach($subcat as $data)
 
 
           <!--Grid column-->
@@ -224,9 +221,9 @@
 
               <!--Card image-->
               <div class="view overlay">
-                <img src="{{ asset('uploads/item/'.$data->photo) }}" class="card-img-top"
+                <img src="{{ asset('uploads/sub_category/'.$data->photo) }}" class="card-img-top" height="300" width="200"
                   alt="">
-                <a href="{{ url('product/'.$data->id) }}">
+                <a href="items/{{ $data->id }}">
                   <div class="mask rgba-white-slight"></div>
                 </a>
               </div>
@@ -236,19 +233,17 @@
               <div class="card-body text-center">
                 <!--Category & Title-->
                 <a href="" class="grey-text">
-                  <h5>{{ $data->name }}</h5>
+                  <h5>{{ $data->category->name }}</h5>
                 </a>
                 <h5>
                   <strong>
-                    <a href="/product" class="dark-grey-text">{{ $data->name }}
+                    <a href="" class="dark-grey-text">{{ $data->name }}
                       <span class="badge badge-pill danger-color">NEW</span>
                     </a>
                   </strong>
                 </h5>
 
-                <h4 class="font-weight-bold blue-text">
-                  <strong>{{ $data->price }}/=</strong>
-                </h4>
+
 
               </div>
               <!--Card content-->
@@ -272,7 +267,6 @@
 
     </div>
       <!--Section: Products v.3-->
-
 
 
       <!--Pagination-->

@@ -16,13 +16,13 @@
                             </div>
 
                             <div class="card-body">
-                                <form action="{{ url('update_category/'. $category->id) }}" method="POST" enctype="multipart/form-data">
+                                <form action="{{ url('update_sub_category/'. $sub_category->id) }}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <div class="row">
                                         <div class="form-group col-md-6">
-                                            <label for="exampleInputEmail1">Group Name</label>
-                                            <select name="group_id" class="form-control">
-                                                <option value="{{ $category->id }}">{{ $category->group->name }}</option>
+                                            <label for="exampleInputEmail1">Category Name</label>
+                                            <select name="category_id" class="form-control">
+                                                <option value="{{ $sub_category->id }}">{{ $sub_category->category->name }}</option>
                                                 @foreach($data as $item)
                                                     <option value="{{ $item->id }}">{{ $item->name }}</option>
                                                 @endforeach
@@ -30,23 +30,23 @@
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="exampleInputEmail1">Name</label>
-                                            <input type="text" name="name" class="form-control" id="exampleInputEmail1"  value="{{ $category->name }}">
+                                            <input type="text" name="name" class="form-control" id="exampleInputEmail1"  value="{{ $sub_category->name }}">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Description</label>
-                                        <textarea name="description" class="form-control" id="" rows="4" placeholder="">{{ $category->description }}</textarea>
+                                        <textarea name="description" class="form-control" id="" rows="4" placeholder="">{{ $sub_category->description }}</textarea>
                                     </div>
                                     <div class="row">
                                         <div class="form-group col-md-6">
                                             <label class="form-check-label" for="exampleCheck1">Image</label>
-                                            <img src="{{ asset('uploads/category/'.$category->photo) }}" alt="" height="250" width="200">
+                                            <img src="{{ asset('uploads/sub_category/'.$sub_category->photo) }}" alt="" height="250" width="200">
                                             <input type="file" class="form-control" name="file">
                                         </div>
                                     </div>
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="exampleCheck1" name="status" {{ $category->status == '1' ? 'checked' : ' ' }}>
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1" name="status" {{ $sub_category->status == '1' ? 'checked' : ' ' }}>
                                         <label class="form-check-label" for="exampleCheck1">Show/Hide</label>
                                     </div>
 

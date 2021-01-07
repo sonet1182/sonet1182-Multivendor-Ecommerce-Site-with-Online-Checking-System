@@ -4,7 +4,7 @@
 
       <!-- Brand -->
       <a class="navbar-brand waves-effect" href="/">
-        <strong class="blue-text">Dokan</strong>
+        <strong class="blue-text pr-5">Dokan</strong>
       </a>
 
       <!-- Collapse -->
@@ -75,7 +75,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="profile">Profile</a>
+                                    <a class="dropdown-item" href="/profile">Profile</a>
                                     @if(Auth::user()->roll_as == "admin")
                                         <a class="dropdown-item" href="/dashboard">Dashboard</a>
                                     @endif
