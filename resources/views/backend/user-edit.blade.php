@@ -61,7 +61,7 @@
     <label for="inputEmail3" class="col-sm-2 col-form-label">Role</label>
     <div class="col-sm-10">
       <select class="custom-select" name="role">
-        <option selected disabled>---Select Role---</option>
+        <option value="{{ $user->roll_as }}">---{{ $user->roll_as }}---</option>
         <option value="admin">Admin</option>
         <option value="vendor">Vendor</option>
         <option value="">User</option>
@@ -70,7 +70,7 @@
   </div>
 
   <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Role</label>
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Access</label>
     <div class="col-sm-10">
       <select class="custom-select" name="access">
         <option selected disabled>---Access---</option>
